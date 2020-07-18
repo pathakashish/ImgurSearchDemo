@@ -7,3 +7,7 @@ This repo is for the assignment that was given by one of the companies as a part
   * Fetch images in memory efficient way with two-level of cache.
   * Provide comments functionality.
       * Maintain database for keeping track of comments locally.
+
+## Assumptions
+  * App only supports static images(.jpeg) and animated GIFs(.gif).
+  * App does not support playing any media(audio/video).
