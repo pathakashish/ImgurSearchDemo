@@ -11,3 +11,4 @@ This repo is for the assignment that was given by one of the companies as a part
 ## Assumptions
   * App only supports static images(.jpeg) and animated GIFs(.gif).
   * App does not support playing any media(audio/video).
+  * Since **Data** has images, when the title is not available for an image, app uses **Data**'s title instead. This may result in multiple images showing the same title(as specified by parent **Data**'s title).
