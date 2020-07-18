@@ -1,28 +1,28 @@
-<mxfile host="app.diagrams.net" modified="2020-07-18T17:28:57.762Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Safari/605.1.15" etag="c93bG-btUaUa_OYZyxAD" version="13.4.6" type="github">
+<mxfile host="app.diagrams.net" modified="2020-07-18T17:31:44.594Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Safari/605.1.15" etag="13lu_MbdurxKjrRX6tU_" version="13.4.6" type="github">
   <diagram name="Page-1" id="5f0bae14-7c28-e335-631c-24af17079c00">
     <mxGraphModel dx="1383" dy="2215" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="_MNJnkABUWx9unRuleEv-1" value="NetworkIO" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="1">
+        <mxCell id="_MNJnkABUWx9unRuleEv-1" value="NetworkIO" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;gradientColor=#b3b3b3;gradientDirection=east;" vertex="1" parent="1">
           <mxGeometry x="120" y="-340" width="400" height="230" as="geometry" />
         </mxCell>
-        <mxCell id="_MNJnkABUWx9unRuleEv-2" value="Retrofit" style="shape=component;align=left;spacingLeft=36;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;html=1;" vertex="1" parent="1">
+        <mxCell id="_MNJnkABUWx9unRuleEv-2" value="Retrofit" style="shape=component;align=left;spacingLeft=36;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;html=1;fillColor=#f9f7ed;strokeColor=#36393d;" vertex="1" parent="1">
           <mxGeometry x="300" y="-320" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_MNJnkABUWx9unRuleEv-3" value="OkHttp" style="shape=component;align=left;spacingLeft=36;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;html=1;" vertex="1" parent="1">
+        <mxCell id="_MNJnkABUWx9unRuleEv-3" value="OkHttp" style="shape=component;align=left;spacingLeft=36;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;html=1;fillColor=#eeeeee;strokeColor=#36393d;" vertex="1" parent="1">
           <mxGeometry x="300" y="-240" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_MNJnkABUWx9unRuleEv-5" value="Picasso" style="shape=component;align=left;spacingLeft=36;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;html=1;" vertex="1" parent="1">
+        <mxCell id="_MNJnkABUWx9unRuleEv-5" value="Picasso" style="shape=component;align=left;spacingLeft=36;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;html=1;fillColor=#ffcccc;strokeColor=#36393d;" vertex="1" parent="1">
           <mxGeometry x="155" y="-240" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_MNJnkABUWx9unRuleEv-6" value="Mediator" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="1">
+        <mxCell id="_MNJnkABUWx9unRuleEv-6" value="Mediator" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;gradientDirection=west;gradientColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="610" y="-340" width="330" height="230" as="geometry" />
         </mxCell>
-        <mxCell id="_MNJnkABUWx9unRuleEv-7" value="RxJava" style="shape=component;align=left;spacingLeft=36;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;html=1;" vertex="1" parent="1">
+        <mxCell id="_MNJnkABUWx9unRuleEv-7" value="RxJava" style="shape=component;align=left;spacingLeft=36;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;html=1;fillColor=#ffff88;strokeColor=#36393d;" vertex="1" parent="1">
           <mxGeometry x="780" y="-300" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_MNJnkABUWx9unRuleEv-8" value="Kodein DI" style="shape=component;align=left;spacingLeft=36;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;html=1;" vertex="1" parent="1">
+        <mxCell id="_MNJnkABUWx9unRuleEv-8" value="Kodein DI" style="shape=component;align=left;spacingLeft=36;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;html=1;fillColor=#cce5ff;strokeColor=#36393d;" vertex="1" parent="1">
           <mxGeometry x="780" y="-220" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="_MNJnkABUWx9unRuleEv-9" value="" style="endArrow=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="_MNJnkABUWx9unRuleEv-10" target="_MNJnkABUWx9unRuleEv-2">
@@ -87,13 +87,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="_MNJnkABUWx9unRuleEv-27" value="UI" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="1">
+        <mxCell id="_MNJnkABUWx9unRuleEv-27" value="UI" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;gradientColor=#ffa500;fillColor=#ffcd28;strokeColor=#d79b00;gradientDirection=east;" vertex="1" parent="1">
           <mxGeometry x="1000" y="-340" width="330" height="230" as="geometry" />
         </mxCell>
-        <mxCell id="_MNJnkABUWx9unRuleEv-28" value="Grid" style="shape=component;align=left;spacingLeft=36;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;html=1;" vertex="1" parent="1">
+        <mxCell id="_MNJnkABUWx9unRuleEv-28" value="Grid" style="shape=component;align=left;spacingLeft=36;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
           <mxGeometry x="1170" y="-320" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_MNJnkABUWx9unRuleEv-29" value="Details" style="shape=component;align=left;spacingLeft=36;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;html=1;" vertex="1" parent="1">
+        <mxCell id="_MNJnkABUWx9unRuleEv-29" value="Details" style="shape=component;align=left;spacingLeft=36;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
           <mxGeometry x="1170" y="-240" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="_MNJnkABUWx9unRuleEv-31" value="" style="endArrow=none;html=1;entryX=0;entryY=0.3;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="_MNJnkABUWx9unRuleEv-32" target="_MNJnkABUWx9unRuleEv-28">
