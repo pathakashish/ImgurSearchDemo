@@ -1,4 +1,4 @@
-package com.ashish.imgursearchdemo.data
+package com.ashish.imgursearchdemo.model
 
 /**
  * Some [Data] items have images array instead of direct image link. This [Image] class represents
@@ -17,7 +17,15 @@ data class Image(val id: String, val title: String, val type: String, val animat
 /**
  * Represents item in [SearchResult.data] array. Omitting fields which we are not using in this app.
  */
-data class Data(val id: String, val title: String, val link: String, val images: Array<Image>) {
+data class Data(val id: String, val title: String, val type: String, val animated: Boolean, val link: String, val images: Array<Image>) {
+    /**
+     * Currently this app only supports static images(.jpeg) or animated GIFs(.gif).
+     * .mp4 and other formats are currently not supported.
+     *
+     * @return **true** if we support showing this image in our app. **false** otherwise.
+     */
+    fun isSupported() = !animated || type == "image/gif"
+
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (javaClass != other?.javaClass) return false
