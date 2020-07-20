@@ -1,17 +1,15 @@
 package com.ashish.imgursearchdemo.di
 
 import com.ashish.imgursearchdemo.BuildConfig
-import com.ashish.imgursearchdemo.imgurapi.AuthInterceptor
-import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
+import okhttp3.HttpUrl
 import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
-import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Singleton
 
 @Module
@@ -20,17 +18,23 @@ object RetrofitModule {
 
     @Provides
     @Singleton
-    fun provideGsonConverterFactory(gson: Gson): GsonConverterFactory {
-        return GsonConverterFactory.create(gson)
+    fun provideMoshiConverterFactory(): MoshiConverterFactory {
+        return MoshiConverterFactory.create()
     }
 
     @Provides
     @Singleton
-    fun provideRetrofit(okHttpClient: OkHttpClient, factory: GsonConverterFactory): Retrofit {
+    fun provideRetrofit(
+        okHttpClient: OkHttpClient, moshiConverterFactory: MoshiConverterFactory,
+        httpUrl: HttpUrl = HttpUrl.Builder()
+            .scheme(BuildConfig.END_POINT_SCHEME)
+            .host(BuildConfig.END_POINT_HOST)
+            .build()
+    ): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(BuildConfig.END_POINT)
+            .baseUrl(httpUrl)
             .client(okHttpClient)
-            .addConverterFactory(factory)
+            .addConverterFactory(moshiConverterFactory)
             .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
             .build()
     }
