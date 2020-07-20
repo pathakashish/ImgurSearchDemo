@@ -5,7 +5,6 @@ import io.reactivex.rxjava3.core.Flowable
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
-import retrofit2.http.QueryName
 
 interface ImgurApi {
     @GET("3/gallery/search/{pageNumber}")
