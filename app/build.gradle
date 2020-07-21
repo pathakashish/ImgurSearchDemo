@@ -89,4 +89,7 @@ dependencies {
 
     // Mockito
     testImplementation "org.mockito:mockito-core:$mockitoVersion"
+
+    // LeakCanary for memory leak detection
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakCanaryVersion"
 }
