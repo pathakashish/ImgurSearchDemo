@@ -136,8 +136,8 @@ class ImgurImageSearchActivity : AppCompatActivity(), ImgurSearchView {
         recyclerView.adapter = ImageAdapter(this, images, twoPane)
     }
 
-    override fun showEmptyView() {
-        textView.setText(R.string.no_results_available)
+    override fun showMessageWithSearchViewVisible(messageResId: Int) {
+        textView.setText(messageResId)
         searchEditText.visibility = View.VISIBLE
         textView.visibility = View.VISIBLE
         recyclerView.visibility = View.INVISIBLE

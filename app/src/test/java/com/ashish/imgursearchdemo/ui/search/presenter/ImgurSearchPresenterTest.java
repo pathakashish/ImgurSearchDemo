@@ -47,12 +47,30 @@ public class ImgurSearchPresenterTest {
     }
 
     @Test
+    public void whenApiReturnsEmptyResultsShowNoResultsAvailable() {
+        when(dataSource.getImages(anyString())).thenReturn(Single.just(new ArrayList<>()));
+        ImgurSearchView view = mock(ImgurSearchView.class);
+        presenter.bind(view);
+        presenter.search("test");
+        verify(view, times(1)).showMessageWithSearchViewVisible(R.string.no_results_available);
+    }
+
+    @Test
+    public void whenApiReturnsErrorShowErrorInLoading() {
+        when(dataSource.getImages(anyString())).thenReturn(Single.error(new Throwable()));
+        ImgurSearchView view = mock(ImgurSearchView.class);
+        presenter.bind(view);
+        presenter.search("test");
+        verify(view, times(1)).showMessageWithSearchViewVisible(R.string.error_loading);
+    }
+
+    @Test
     public void whenSearchReturnsEmptyResultsShowEmptyListViewIsShown() {
         when(dataSource.getImages(anyString())).thenReturn(Single.just(new ArrayList<>()));
         ImgurSearchView view = mock(ImgurSearchView.class);
         presenter.bind(view);
         presenter.search("test");
-        verify(view, times(1)).showEmptyView();
+        verify(view, times(1)).showMessageWithSearchViewVisible(R.string.no_results_available);
     }
 
     @Test

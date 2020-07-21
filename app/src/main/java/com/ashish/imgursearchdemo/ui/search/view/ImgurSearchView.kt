@@ -9,5 +9,5 @@ interface ImgurSearchView {
 
     fun updateRecyclerView(images: List<UiImage>)
 
-    fun showEmptyView()
+    fun showMessageWithSearchViewVisible(messageResId: Int)
 }

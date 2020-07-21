@@ -38,13 +38,13 @@ class ImgurSearchPresenter @Inject constructor(private val imageDataSource: Imgu
     }
 
     private fun getErrorLambda(): @NonNull Consumer<in Throwable> =
-        Consumer { view?.showErrorView(R.string.error_loading) }
+        Consumer { view?.showMessageWithSearchViewVisible(R.string.error_loading) }
 
     private fun getSuccessLambda(): @NonNull Consumer<List<Image>> =
         Consumer { imagesFromApi ->
             val images = imagesFromApi.map { UiImage.fromImage(it) }
             if (images.isEmpty()) {
-                view?.showEmptyView()
+                view?.showMessageWithSearchViewVisible(R.string.no_results_available)
             } else {
                 view?.showContentsView()
                 view?.updateRecyclerView(images)
