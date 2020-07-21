@@ -49,6 +49,7 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:$appCompatVersion"
     implementation "com.google.android.material:material:$appCompatVersion"
     implementation "androidx.core:core-ktx:$coreKtxVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitExtVersion"
     androidTestImplementation "androidx.test:runner:$androidxRunnerVersion"
