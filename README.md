@@ -27,3 +27,4 @@ This repo is for the assignment that was given by one of the companies as a part
  * Used the **Hilt dependency injection**.
  * Used **mockito** for unit testing presenters.
  * Used **Retrofit** for making API calls and **Moshi** adapters to parse **json** response
+ * Uses **LeakCanary** to detect memory leaks.
