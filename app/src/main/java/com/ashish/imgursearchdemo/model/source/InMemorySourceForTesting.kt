@@ -4,6 +4,11 @@ import com.ashish.imgursearchdemo.model.Image
 import io.reactivex.rxjava3.core.Single
 import java.util.concurrent.TimeUnit
 
+/**
+ * During development, have to hit the API many times. Sometimes this exceeds our request quota.
+ * To avoid that from happening, got the results from the API and then created this class which
+ * immediately provides the result to the UI so that we don't have to hit the server every time.
+ */
 class InMemorySourceForTesting : ImgurSource {
     override fun getImages(searchText: String): Single<List<Image>> {
         return Single.just(
@@ -32,6 +37,6 @@ class InMemorySourceForTesting : ImgurSource {
                 Image("22", "dfsg", "image/gif", true, "https://i.imgur.com/pi3Vo4s.gif"),
                 Image("23", "fghknh", "image/gif", true, "https://i.imgur.com/ThMeX9Y.gif")
             )
-        ).delay(2, TimeUnit.SECONDS)
+        ).delay(1, TimeUnit.SECONDS)
     }
 }

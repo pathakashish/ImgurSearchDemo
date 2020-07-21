@@ -4,6 +4,10 @@ import android.os.Parcel
 import android.os.Parcelable
 import com.ashish.imgursearchdemo.model.Image
 
+/**
+ * UI representation of the images received from the Imgur server. Created this so that Ui logic
+ * need not change if the API response changes.
+ */
 class UiImage(val id: String, val title: String, val link: String) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString() ?: "",

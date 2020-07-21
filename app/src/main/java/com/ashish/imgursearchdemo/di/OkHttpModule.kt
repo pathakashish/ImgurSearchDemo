@@ -12,6 +12,9 @@ import okhttp3.logging.HttpLoggingInterceptor
 import java.io.File
 import javax.inject.Singleton
 
+/**
+ * Provides the OkHttp related dependencies.
+ */
 @Module
 @InstallIn(ApplicationComponent::class)
 object OkHttpModule {

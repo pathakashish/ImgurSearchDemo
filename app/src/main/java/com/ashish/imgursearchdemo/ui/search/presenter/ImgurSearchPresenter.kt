@@ -8,13 +8,14 @@ import com.ashish.imgursearchdemo.model.source.remote.ImgurRemoteSource
 import com.ashish.imgursearchdemo.ui.search.images.UiImage
 import com.ashish.imgursearchdemo.ui.search.view.ImgurSearchView
 import dagger.hilt.android.scopes.ActivityRetainedScoped
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.annotations.NonNull
 import io.reactivex.rxjava3.disposables.Disposable
 import io.reactivex.rxjava3.functions.Consumer
-import io.reactivex.rxjava3.schedulers.Schedulers
 import javax.inject.Inject
 
+/**
+ * Presenter for the search results.
+ */
 @ActivityRetainedScoped
 class ImgurSearchPresenter @Inject constructor(private val imageDataSource: ImgurRemoteSource) :
     ViewModel() {
