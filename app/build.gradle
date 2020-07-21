@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.ashish.imgursearchdemo"
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -32,6 +32,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 }
 
 kapt {
@@ -50,6 +53,7 @@ dependencies {
     implementation "com.google.android.material:material:$appCompatVersion"
     implementation "androidx.core:core-ktx:$coreKtxVersion"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    implementation "androidx.legacy:legacy-support-v4:$legacySupportVersion"
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitExtVersion"
     androidTestImplementation "androidx.test:runner:$androidxRunnerVersion"
@@ -76,4 +80,13 @@ dependencies {
     // RxJava3 & RxAndroid3
     implementation "io.reactivex.rxjava3:rxandroid:$rxAndroidVersion"
     implementation "io.reactivex.rxjava3:rxjava:$rxJavaVersion"
+    implementation "com.jakewharton.rxbinding4:rxbinding-core:$rxBindingsAndroidVersion"
+
+    // Glide for image loading
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
+    kapt "com.github.bumptech.glide:compiler:$glideVersion"
+
+    // Mockito
+    testImplementation "org.mockito:mockito-core:$mockitoVersion"
 }

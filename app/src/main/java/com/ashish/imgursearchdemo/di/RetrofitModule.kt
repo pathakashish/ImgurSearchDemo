@@ -24,12 +24,18 @@ object RetrofitModule {
 
     @Provides
     @Singleton
-    fun provideRetrofit(
-        okHttpClient: OkHttpClient, moshiConverterFactory: MoshiConverterFactory,
-        httpUrl: HttpUrl = HttpUrl.Builder()
+    fun provideBaseHttpsUrl(): HttpUrl {
+        return HttpUrl.Builder()
             .scheme(BuildConfig.END_POINT_SCHEME)
             .host(BuildConfig.END_POINT_HOST)
             .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideRetrofit(
+        okHttpClient: OkHttpClient, moshiConverterFactory: MoshiConverterFactory,
+        httpUrl: HttpUrl
     ): Retrofit {
         return Retrofit.Builder()
             .baseUrl(httpUrl)

@@ -3,7 +3,9 @@ package com.ashish.imgursearchdemo.model.source.remote
 import com.ashish.imgursearchdemo.imgurapi.ImgurApi
 import com.ashish.imgursearchdemo.model.Image
 import com.ashish.imgursearchdemo.model.source.ImgurSource
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Single
+import io.reactivex.rxjava3.schedulers.Schedulers
 import javax.inject.Inject
 
 /**
@@ -19,6 +21,8 @@ class ImgurRemoteSource @Inject constructor(private val imgurApi: ImgurApi) : Im
      */
     override fun getImages(searchText: String): Single<List<Image>> {
         return imgurApi.search(pageNumber, searchText)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
             .map { result -> result.data.filter { it.isSupported() } }
             .map { dataList ->
                 dataList.fold(mutableListOf<Image>(), { images, data ->

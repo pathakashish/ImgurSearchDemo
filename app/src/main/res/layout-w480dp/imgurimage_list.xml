@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerHorizontal"
+    android:orientation="horizontal"
+    android:showDividers="middle"
+    tools:context=".ui.search.ImgurImageSearchActivity">
+
+    <!--
+    This layout is a two-pane layout for the ImgurImages master/detail flow.
+    -->
+
+    <EditText
+        android:id="@+id/search_edittext"
+        android:layout_width="@dimen/recyclerview_width"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/general_margin"
+        android:layout_marginRight="@dimen/general_margin"
+        android:autofillHints="@null"
+        android:hint="@string/type_here_to_search"
+        android:imeOptions="flagNoExtractUi|actionSearch"
+        android:inputType="textPersonName"
+        android:lines="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/imgurimage_list"
+        android:name="com.ashish.imgursearchdemo.ui.search.ImgurImageListFragment"
+        android:layout_width="@dimen/recyclerview_width"
+        android:layout_height="0dip"
+        android:layout_marginLeft="@dimen/general_margin"
+        android:layout_marginTop="@dimen/general_margin"
+        android:layout_marginRight="@dimen/general_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_edittext"
+        tools:context="com.ashish.imgursearchdemo.ui.search.ImgurImageSearchActivity"
+        tools:listitem="@layout/imgurimage_list_content" />
+
+    <FrameLayout
+        android:id="@+id/imgurimage_detail_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:padding="@dimen/general_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgurimage_list"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/error_textview"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imgurimage_list"
+        app:layout_constraintEnd_toEndOf="@+id/imgurimage_detail_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_edittext" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">ImgurSearchDemo</string>
-    <string name="title_item_detail">Item Detail</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_imgurimage_list">ImgurImages</string>
+    <string name="title_imgurimage_detail">ImgurImage Detail</string>
+    <string name="type_here_to_search">Type here to search</string>
+    <string name="network_not_available">Not connected to the internet</string>
+    <string name="no_results_available">No results available</string>
+    <string name="error_loading">Error while loading data from server</string>
 </resources>
