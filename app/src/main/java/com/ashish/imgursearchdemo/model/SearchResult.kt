@@ -9,8 +9,7 @@ data class Image(
     val title: String?,
     val type: String?,
     val animated: Boolean,
-    val link: String,
-    val comments: List<String>?
+    val link: String
 ) {
     /**
      * Currently this app only supports static images(.jpeg) or animated GIFs(.gif).
@@ -30,8 +29,13 @@ data class Data(
     val type: String?,
     val animated: Boolean,
     val link: String?,
-    val images: List<Image>?
+    private val images: List<Image>?
 ) {
+    val imageList: List<Image>
+        get() {
+            return images?.map { it.copy(title = title) } ?: listOf(toImage())
+        }
+
     /**
      * Currently this app only supports static images(.jpeg) or animated GIFs(.gif).
      * .mp4 and other formats are currently not supported.
@@ -39,6 +43,14 @@ data class Data(
      * @return **true** if we support showing this image in our app. **false** otherwise.
      */
     fun isSupported() = !animated || type == "image/gif"
+
+    private fun toImage() = Image(id, title, type, animated, link!!)
+
+    fun supportedImagesWithData(): List<Image> {
+        return (images?.map { it.copy(title = title) } ?: listOf(toImage()))
+            .filter { it.isSupported() }
+    }
+
 }
 
 /**
