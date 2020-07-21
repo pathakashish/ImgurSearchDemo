@@ -11,12 +11,6 @@ class UiImage(val id: String, val title: String, val link: String) : Parcelable 
         parcel.readString() ?: ""
     )
 
-//    companion object {
-//        fun fromImage(image: Image): UiImage {
-//            return UiImage(image.id, image.title ?: "", image.link)
-//        }
-//    }
-
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(id)
         parcel.writeString(title)
