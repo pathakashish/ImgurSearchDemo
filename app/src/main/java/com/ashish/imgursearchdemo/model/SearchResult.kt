@@ -1,5 +1,7 @@
 package com.ashish.imgursearchdemo.model
 
+import kotlin.text.isNotEmpty as isNotEmpty1
+
 /**
  * Some [Data] items have images array instead of direct image link. This [Image] class represents
  * image with link and title. Omitting the unused fields in this app.
@@ -18,6 +20,9 @@ data class Image(
      * @return **true** if we support showing this image in our app. **false** otherwise.
      */
     fun isSupported() = !animated || type == "image/gif"
+    internal fun hasTitle(): Boolean {
+        return title != null && title.isNotEmpty1()
+    }
 }
 
 /**
@@ -33,7 +38,8 @@ data class Data(
 ) {
     val imageList: List<Image>
         get() {
-            return images?.map { it.copy(title = title) } ?: listOf(toImage())
+            return images?.map { if (!it.hasTitle()) it.copy(title = title) else it }
+                ?: listOf(toImage())
         }
 
     /**
@@ -47,10 +53,10 @@ data class Data(
     private fun toImage() = Image(id, title, type, animated, link!!)
 
     fun supportedImagesWithData(): List<Image> {
-        return (images?.map { it.copy(title = title) } ?: listOf(toImage()))
+        return (images?.map { if (!it.hasTitle()) it.copy(title = title) else it }
+            ?: listOf(toImage()))
             .filter { it.isSupported() }
     }
-
 }
 
 /**

@@ -46,7 +46,22 @@ public class DataTest {
         Data data = new Data("1", "1", null, false, "", images);
         List<Image> supportedImages = data.supportedImagesWithData();
         assertEquals(2, supportedImages.size());
-        assertEquals(new Image("1", "1", "image/jpeg", false, "https://test.jpg"), images.get(0));
-        assertEquals(new Image("1", "1", "image/gif", true, "https://test.jpg"), images.get(1));
+        assertEquals(new Image("1", "1", "image/jpeg", false, "https://test.jpg"), supportedImages.get(0));
+        assertEquals(new Image("1", "1", "image/gif", true, "https://test.jpg"), supportedImages.get(1));
+    }
+
+    @Test
+    public void supportedImagesWithDataReturnsImageListWithOnlySupportedImgesImagesIsNonNullChangesTitleOnlyIfImagesDoesNotHaveTitle() {
+        ArrayList<Image> images = new ArrayList<Image>();
+        images.add(new Image("1", "", "image/jpeg", false, "https://test.jpg"));
+        images.add(new Image("1", null, "image/gif", true, "https://test.jpg"));
+        images.add(new Image("1", "1", "video/mp4", true, "https://test.jpg"));
+        images.add(new Image("1", "title", "image/gif", true, "https://test.jpg"));
+        Data data = new Data("1", "2", null, false, "", images);
+        List<Image> supportedImages = data.supportedImagesWithData();
+        assertEquals(3, supportedImages.size());
+        assertEquals(new Image("1", "2", "image/jpeg", false, "https://test.jpg"), supportedImages.get(0));
+        assertEquals(new Image("1", "2", "image/gif", true, "https://test.jpg"), supportedImages.get(1));
+        assertEquals(new Image("1", "title", "image/gif", true, "https://test.jpg"), supportedImages.get(2));
     }
 }

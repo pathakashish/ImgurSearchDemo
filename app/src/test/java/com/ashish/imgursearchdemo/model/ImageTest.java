@@ -23,4 +23,22 @@ public class ImageTest {
         Image image = new Image("", "", "video/mp4", true, "");
         assertFalse(image.isSupported());
     }
+
+    @Test
+    public void hasTitleReturnsFalseForNullTitle() {
+        Image image = new Image("", null, "video/mp4", true, "");
+        assertFalse(image.isSupported());
+    }
+
+    @Test
+    public void hasTitleReturnsFalseForEmptyTitle() {
+        Image image = new Image("", "", "video/mp4", true, "");
+        assertFalse(image.isSupported());
+    }
+
+    @Test
+    public void hasTitleReturnsTrueWhenTitleIsNeitherEmptyNotNull() {
+        Image image = new Image("", "title", "video/mp4", true, "");
+        assertFalse(image.isSupported());
+    }
 }
