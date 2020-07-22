@@ -1,4 +1,5 @@
-![buils status](https://github.com/pathakashish/ImgurSearchDemo/workflows/Android%20CI/badge.svg)
+![Build status](https://github.com/pathakashish/ImgurSearchDemo/workflows/.github/workflows/android.yml/badge.svg)
+
 
 # ImgurSearchDemo
 This repo is for the assignment that was given by one of the companies as a part of their interview process.
