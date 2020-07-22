@@ -20,14 +20,16 @@ import javax.inject.Inject
 class ImgurSearchPresenter @Inject constructor(private val imageDataSource: ImgurRemoteSource) :
     ViewModel() {
 
-    @VisibleForTesting
-    internal var view: ImgurSearchView? = null
+    private var _view: ImgurSearchView? = null
+
+    val view: ImgurSearchView?
+        get() = _view
 
     @VisibleForTesting
     internal var searchResultDisposable: Disposable? = null
 
     fun bind(view: ImgurSearchView?) {
-        this.view = view
+        this._view = view
     }
 
     fun search(searchText: String) {
@@ -39,31 +41,31 @@ class ImgurSearchPresenter @Inject constructor(private val imageDataSource: Imgu
     }
 
     private fun getErrorLambda(): @NonNull Consumer<in Throwable> =
-        Consumer { view?.showMessageWithSearchViewVisible(R.string.error_loading) }
+        Consumer { _view?.showMessageWithSearchViewVisible(R.string.error_loading) }
 
     private fun getSuccessLambda(): @NonNull Consumer<List<Image>> =
         Consumer { imagesFromApi ->
             val images = imagesFromApi.map { UiImage.fromImage(it) }
             if (images.isEmpty()) {
-                view?.showMessageWithSearchViewVisible(R.string.no_results_available)
+                _view?.showMessageWithSearchViewVisible(R.string.no_results_available)
             } else {
-                view?.showContentsView()
-                view?.updateRecyclerView(images)
+                _view?.showContentsView()
+                _view?.updateRecyclerView(images)
             }
         }
 
     fun onNetworkAvailable() {
-        view?.showContentsView()
+        _view?.showContentsView()
     }
 
     fun onNetworkLost() {
-        view?.showErrorView(R.string.network_not_available)
+        _view?.showErrorView(R.string.network_not_available)
     }
 
     fun unbind() {
         if (searchResultDisposable?.isDisposed == false) {
             searchResultDisposable?.dispose()
         }
-        view = null
+        _view = null
     }
 }

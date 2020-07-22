@@ -29,9 +29,9 @@ public class ImgurSearchPresenterTest {
 
     @Test
     public void testThatBindAssignsViewToPresenter() {
-        assertNull(presenter.getView$app_debug());
+        assertNull(presenter.getView());
         presenter.bind(mock(ImgurSearchView.class));
-        assertNotNull(presenter.getView$app_debug());
+        assertNotNull(presenter.getView());
     }
 
     @Test
@@ -93,6 +93,6 @@ public class ImgurSearchPresenterTest {
     public void testThatUnbindUnassignsViewToPresenter() {
         presenter.bind(mock(ImgurSearchView.class));
         presenter.unbind();
-        assertNull(presenter.getView$app_debug());
+        assertNull(presenter.getView());
     }
 }
