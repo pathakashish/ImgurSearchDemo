@@ -86,7 +86,7 @@ public class ImgurSearchPresenterTest {
         ImgurSearchView view = mock(ImgurSearchView.class);
         presenter.bind(view);
         presenter.onNetworkLost();
-        verify(view, times(1)).showErrorView(R.string.network_not_available);
+        verify(view, times(0)).showErrorView(R.string.network_not_available);
     }
 
     @Test
