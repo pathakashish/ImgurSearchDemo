@@ -1,4 +1,4 @@
-![Build status](https://github.com/pathakashish/ImgurSearchDemo/workflows/.github/workflows/android.yml/badge.svg)
+![build status](https://github.com/pathakashish/ImgurSearchDemo/workflows/Android%20CI/badge.svg?branch=master)
 
 
 # ImgurSearchDemo
