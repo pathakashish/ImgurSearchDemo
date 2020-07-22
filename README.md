@@ -5,10 +5,10 @@
 This repo is for the assignment that was given by one of the companies as a part of their interview process.
 
 ## TODO
-  * ~~Fetch search results for the search string from https://api.imgur.com/3/gallery/search/1?q=<search_string>.~~
-  * ~~Provide two-level cache for network requests(disk cache and in memory cache).~~
-  * ~~Fetch images in memory efficient way with two-level of cache.~~
-  * ~~Show static images as well as animanated GIFs.~~
+  * :white_check_mark: Fetch search results for the search string from https://api.imgur.com/3/gallery/search/1?q=<search_string>.
+  * :white_check_mark: Provide two-level cache for network requests(disk cache and in memory cache).
+  * :white_check_mark: Fetch images in memory efficient way with two-level of cache.
+  * :white_check_mark: Show static images as well as animanated GIFs.
   * Provide comments functionality.
       * Maintain database for keeping track of comments locally.
 
