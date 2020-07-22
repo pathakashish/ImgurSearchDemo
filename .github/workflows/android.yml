@@ -1,8 +1,6 @@
 name: Android CI
 
 on:
-  commit_comment:
-    branches: [ master ]
   push:
     branches: [ master ]
   pull_request:
