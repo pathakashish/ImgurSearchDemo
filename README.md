@@ -2,7 +2,7 @@
 
 
 # ImgurSearchDemo
-This repo is for the assignment that was given by one of the companies as a part of their interview process.
+This repo is my playground to try out stuff like TDD, CI/CD, and different architecture patterns.
 
 ## TODO
   :white_check_mark: Fetch search results for the search string from https://api.imgur.com/3/gallery/search/1?q=<search_string>.
